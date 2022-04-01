@@ -1,0 +1,89 @@
+{
+  "name": "ei-fetch",
+  "version": "1.0.0",
+  "description": "Simple and powerful API client for react. Use hooks or FACC's to fetch data in easy way.",
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf lib",
+    "test": "jest --verbose --env=jsdom",
+    "build-package": "rollup --config",
+    "pre-commit": "yarn lint-fix && yarn format",
+    "build": "yarn clean && yarn build-package",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"  \"src/**/*.js\" \"examples/**/*.ts\" \"examples/**/*.js\" \"examples/**/*.tsx\"",
+    "lint": "tslint -p tsconfig.json",
+    "lint-fix": "yarn run tslint --fix --project ./tsconfig.json"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts, tsx}": [
+      "yarn pre-commit",
+      "git add"
+    ]
+  },
+  "keywords": [
+    "react",
+    "fetch",
+    "react-fetch",
+    "fetch-data",
+    "api",
+    "rest",
+    "client",
+    "hooks",
+    "suspense",
+    "react-suspense",
+    "facc",
+    "faccs",
+    "brasil",
+    "br",
+    "fetch",
+    "ei"
+  ],
+  "author": "Bruno Melo <srbrunomelo@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@ampproject/rollup-plugin-closure-compiler": "0.21.0",
+    "@rollup/plugin-typescript": "3.0.0",
+    "@testing-library/react": "^8.0.1",
+    "@types/fetch-mock": "^7.3.1",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.0.8",
+    "@types/react": "^16.8.20",
+    "@types/react-dom": "^16.8.4",
+    "codecov": "^3.5.0",
+    "fetch-mock": "^7.3.3",
+    "google-closure-compiler": "20200204.0.0",
+    "husky": "^2.4.1",
+    "jest": "^24.8.0",
+    "jest-dom": "^3.5.0",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.18.2",
+    "promise": "^8.0.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hooks-testing-library": "^0.5.1",
+    "react-test-renderer": "^16.8.6",
+    "rollup": "1.31.1",
+    "rollup-plugin-dts": "1.2.1",
+    "set-value": "3.0.1",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.17.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "3.7.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.4",
+    "react-dom": ">=16.8.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcin-piela/react-fetching-library.git"
+  }
+}
