@@ -4,7 +4,8 @@
 </p>
  
 
-✅ Zero dependencies (react, react-dom as peer deps) 
+✅ Zero dependencies (react, react-dom as peer deps)
+
 ✅ Use hooks  
 
 ## Documentation
@@ -19,7 +20,7 @@ const fetchUsersList = {
 };
 
 export const UsersListContainer = () => {
-   const { data, isError, isLoading } = useFetch(fetchUsersList);
+  const { data, isError, isLoading } = useFetch(fetchUsersList);
 
   if (isLoading) return <h1>isLoading</h1>;
   if (isError) return <h1>isErroro</h1>;
