@@ -8,6 +8,10 @@
 
 ✅ Use hooks  
 
+
+[download-image]: https://img.shields.io/npm/dm/ei-fetch.svg?style=flat-square
+[download-url]: https://npmjs.org/package/ei-fetch
+
 ## Documentation
 
 ## Short example of use
